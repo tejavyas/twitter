@@ -11,3 +11,6 @@ WORKDIR /workspace
 
 # Keep the container running
 CMD ["sleep", "infinity"]
+
+## to start postgres
+# docker-compose up -d
