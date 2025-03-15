@@ -1,8 +1,7 @@
-docker-compose.yml
 version: '3.8'
 services:
   app:
-    image: mcr.microsoft.com/devcontainers/java:1-17
+    build: .
     volumes:
       - .:/workspace
     command: sleep infinity
