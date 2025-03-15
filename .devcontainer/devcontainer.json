@@ -1,0 +1,29 @@
+{
+  "name": "Spring Boot with Postgres",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": "true",
+      "mavenVersion": "3.9.6"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-spring-boot",
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot",
+        "redhat.java",
+        "cschleiden.vscode-postgresql"
+      ]
+    }
+  },
+  "postCreateCommand": "mvn dependency:resolve",
+  "forwardPorts": [5432]
+}
